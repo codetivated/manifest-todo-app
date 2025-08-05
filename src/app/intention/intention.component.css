@@ -48,12 +48,8 @@ button {
   }
 }
 
-button:hover,
-button:active,
-.active {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(155, 93, 229, 0.3); /* glow effect */
-  background-color: var(--color-lavender-pink);
+button:hover {
+  animation: shimmer 8s ease infinite;
 }
 
 @keyframes shimmer {
