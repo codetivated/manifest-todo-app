@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-orchid: #9B5DE5;
+  --color-lavender-pink: #F15BB5;
+  --color-grape: #6A4C93;
+  --color-lilac-gray: #C4B5FD;
+  --color-butter-yellow: #FEE440;
+  --color-mint-green: #00BB94;
+  --color-ivory-white: #FDFDFD;
+  --color-deep-black: #333;
+  --color-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/* Apply Cabin Condensed to the whole site */
+body {
+  font-family: 'Cabin Condensed', sans-serif;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* Use Playfair Display SC for titles */
+h1, h2, h3, h4, button {
+  font-family: 'Playfair Display SC', serif;
+}
+
+p {
+  font-size: 25px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+.iridescent-bg {
+background: linear-gradient(
+    135deg,
+    var(--color-orchid),
+    var(--color-lavender-pink),
+    var(--color-lilac-gray),
+    var(--color-white),
+    var(--color-butter-yellow),
+    var(--color-mint-green)
+  );
+  background-size: 400% 400%;
+  animation: shimmer 10s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

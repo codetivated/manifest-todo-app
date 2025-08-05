@@ -1,0 +1,78 @@
+.manifest-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-orchid);
+}
+
+.intro {
+  font-size: 1.25rem;
+  color: var(--color-grape);
+}
+
+.sub-heading {
+  width: 100%;
+}
+
+.image-section {
+  background-image: url('/assets/texture.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  border: 10px solid var(--color-lavender-pink);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 800px;
+  min-height: 500px;
+}
+
+.text-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.sub-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-grape);
+  margin: 0 0 0.5rem 0;
+}
+
+.header-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--color-black);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #bbb;
+  margin: 1rem 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .image-section {
+    padding: 5rem 3rem;
+  }
+}
