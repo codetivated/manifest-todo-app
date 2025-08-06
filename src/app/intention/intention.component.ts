@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {INTENTION_CATEGORIES} from '../intention-categories';
+import {INTENTION_CATEGORIES} from './intention-categories';
 import { CommonModule } from '@angular/common';
 
 @Component({
