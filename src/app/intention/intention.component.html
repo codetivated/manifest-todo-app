@@ -1,7 +1,28 @@
 <!DOCTYPE html>
-      <div *ngFor="let intention of intentions">
-        <button>
-          <img src="../../assets/intentions/{{intention.icon}}"/>
-          <span>{{intention.category}}</span>
-        </button>
-      </div>
+<div class="intentions-container">
+  <h1 class="direction">Ready to get your intentions started?</h1>
+
+  <div class="left-panel">
+    <div class="category-card" *ngFor="let intention of intentions">
+      <button (click)="onSelectCategory(intention)">
+        <img [src]="intention.imagePath" [alt]="intention.category" />
+        <span>{{ intention.category }}</span>
+      </button>
+    </div>
+  </div>
+
+    <div *ngIf="!selectedCategory" class="input-area right-panel">
+        <h3>Select an intention to manifest</h3>
+  </div>
+
+
+  <div *ngIf="selectedCategory" class="input-area right-panel">
+        <h3>Add a {{ selectedCategory.category }} intention to manifest:</h3>
+    <textarea [(ngModel)]="newIntention" placeholder="Type your intention..."></textarea>
+    <button (click)="addIntention()">Add</button>
+
+    <ul>
+      <li *ngFor="let i of selectedCategory.intentions">{{ i }}</li>
+    </ul>
+  </div>
+</div>
