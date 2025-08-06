@@ -2,16 +2,16 @@ export const INTENTION_CATEGORIES = [
   {
     id: 'mind_intention',
     name: 'Mind',
-    avatar: '2.png',
+    avatar: 'mind-intention-icon.png',
   },
   {
     id: 'body_intention',
     name: 'Body',
-    avatar: '3.png',
+    avatar: 'body-intention-icon.png',
   },
   {
     id: 'soul_intention',
     name: 'Soul',
-    avatar: '4.png',
+    avatar: 'soul-intention-icon.png',
   },
 ];
