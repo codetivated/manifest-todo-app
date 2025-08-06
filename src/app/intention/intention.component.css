@@ -48,9 +48,6 @@ button {
   }
 }
 
-button:hover {
-  animation: shimmer 8s ease infinite;
-}
 
 @keyframes shimmer {
   0% {
