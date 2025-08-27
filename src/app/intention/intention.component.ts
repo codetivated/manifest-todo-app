@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {INTENTION_CATEGORIES} from './intention-categories';
+import {INTENTION_CATEGORIES} from '../data/intention-categories';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -19,7 +19,7 @@ export class IntentionComponent {
   constructor() {
     this.intentions = INTENTION_CATEGORIES.map((intention) => ({
       ...intention,
-      imagePath: '../../assets/intentions/' + intention.icon
+      imagePath: '../../assets/' + intention.icon
     }));
     console.log(this.intentions);
   }
