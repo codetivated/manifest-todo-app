@@ -73,7 +73,7 @@
       "backgroundColor": "transparent",
       "bold": false,
       "italic": false
-    },
+    }
   ],
   "css.validate": false,
   "editor.accessibilitySupport": "off",
@@ -81,8 +81,23 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[javascript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[css]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
   "editor.fontFamily": "'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.linkedEditing": true,
   "editor.scrollBeyondLastColumn": 2,
@@ -100,11 +115,9 @@
   "stylelint.enable": true,
   "terminal.integrated.fontFamily": "'Inconsolata', monospace",
   "workbench.colorTheme": "Matchalk",
-  "workbench.enableExperiments": false,
   "workbench.iconTheme": "file-icons",
   "workbench.view.alwaysShowHeaderActions": true,
   "editor.parameterHints.enabled": false,
-  "html.format.endWithNewline": true,
   "html.format.maxPreserveNewLines": 2,
   "html.format.wrapLineLength": 80,
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -118,5 +131,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
   "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
-  "liveServer.settings.port": 5501,
+  "htmlhint.options": {
+  "doctype-first": false
+}
 }
