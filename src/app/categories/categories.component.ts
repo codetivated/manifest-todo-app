@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import {CATEGORIES} from '../data/categories';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Category } from './category.model';
 
 @Component({
   selector: 'app-categories',
@@ -12,30 +12,18 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class CategoriesComponent {
-  intentions: any[] = [];
-  selectedCategory: any = null;
-  newIntention: string = '';
+@Input({required: true}) category!: Category;
+@Output() select = new EventEmitter<string>();
 
-  constructor() {
-    this.intentions = CATEGORIES.map((category) => ({
-      ...category,
-      imagePath: '../../assets/' + category.icon
-    }));
-    console.log(this.intentions);
+
+  get imagePath(): string {
+    return `../../assets/${this.category.icon}`;
   }
 
-
-  onSelectCategory(category: any) {
-    this.selectedCategory = category;
-    this.newIntention = '';
+  onSelectCategory() {
+    this.select.emit(this.category.id);
   }
 
-  addIntention() {
-    if (this.newIntention.trim()) {
-      this.selectedCategory.intentions.push(this.newIntention.trim());
-      this.newIntention = '';
-    }
-  }
 }
 
 

@@ -10,7 +10,16 @@
   <app-nav-header></app-nav-header>
 </header>
 <app-hero></app-hero>
-<app-categories></app-categories>
+<main>
+  <ul id="intentions">
+  @for (category of categories; track category.id) {
+    <app-categories
+    [category]="category"
+    (select)="onCategorySelected($event)">
+  </app-categories>
+  }
+</ul>
+</main>
 </body>
 </html>
 
