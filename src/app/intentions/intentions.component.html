@@ -7,9 +7,11 @@
 </header>
 
 <ul>
-  <li>
-
-  </li>
-</ul>
+    @for (intention of filteredIntentions; track intention.id) {
+    <li>
+      <app-intention [intention]="intention"></app-intention>
+    </li>
+    }
+  </ul>
 
 </section>
