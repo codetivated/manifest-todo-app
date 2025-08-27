@@ -11,7 +11,7 @@
 </header>
 <app-hero></app-hero>
 <main>
-  <ul id="intentions">
+  <ul id="categories">
   @for (category of categories; track category.id) {
     <app-categories
     [category]="category"
@@ -19,6 +19,15 @@
   </app-categories>
   }
 </ul>
+@if (selectedCategory) {
+  <app-intentions
+  [category]="selectedCategory.category"
+  [id]="selectedCategory.id">
+  </app-intentions>
+  } @else {
+  <p id="fallback">Please select an intention to manifest</p>
+  }
+
 </main>
 </body>
 </html>

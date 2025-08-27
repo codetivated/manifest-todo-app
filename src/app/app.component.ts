@@ -3,23 +3,27 @@ import { HeroComponent } from './hero/hero.component';
 import { NavHeaderComponent } from '../app/nav-header/nav-header.component'
 import { CategoriesComponent } from './categories/categories.component';
 import {CATEGORIES} from './data/categories';
+import { IntentionsComponent } from "./intentions/intentions.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeroComponent, NavHeaderComponent, CategoriesComponent],
+  imports: [HeroComponent, NavHeaderComponent, CategoriesComponent, IntentionsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
 categories = CATEGORIES;
-selectedCategory?: string;
+selectedCategoryId?: string;
 
 onCategorySelected(categoryId: string) {
   console.log('Selected category ID:', categoryId);
-  this.selectedCategory = categoryId;
+  this.selectedCategoryId = categoryId;
 }
 
+get selectedCategory() {
+  return this.categories.find(category => category.id === this.selectedCategoryId);
+}
 
 }
