@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntentionComponent } from './intention.component';
+import { IntentionComponent } from './categories.component';
 
 describe('IntentionComponent', () => {
   let component: IntentionComponent;

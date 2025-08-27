@@ -1,4 +1,4 @@
-export const INTENTION_CATEGORIES = [
+export const CATEGORIES = [
   {
     id: 'mind_intention',
     category: 'Mind',

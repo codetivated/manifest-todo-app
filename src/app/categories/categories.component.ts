@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
-import {INTENTION_CATEGORIES} from '../data/intention-categories';
+import {CATEGORIES} from '../data/categories';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-intention',
+  selector: 'app-categories',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './intention.component.html',
-  styleUrl: './intention.component.css'
+  templateUrl: './categories.component.html',
+  styleUrl: './categories.component.css'
 })
 
-export class IntentionComponent {
+export class CategoriesComponent {
   intentions: any[] = [];
   selectedCategory: any = null;
   newIntention: string = '';
 
   constructor() {
-    this.intentions = INTENTION_CATEGORIES.map((intention) => ({
-      ...intention,
-      imagePath: '../../assets/' + intention.icon
+    this.intentions = CATEGORIES.map((category) => ({
+      ...category,
+      imagePath: '../../assets/' + category.icon
     }));
     console.log(this.intentions);
   }
