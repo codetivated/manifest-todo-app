@@ -42,7 +42,9 @@ p {
 
 
 .iridescent-bg {
-background: linear-gradient(
+  border-radius: 200px;
+  border: 1px solid var(--color-deep-black);
+  background: linear-gradient(
     135deg,
     var(--color-orchid),
     var(--color-lavender-pink),
