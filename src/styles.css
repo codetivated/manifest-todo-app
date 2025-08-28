@@ -21,7 +21,7 @@ html {
 
 /* Apply Cabin Condensed to the whole site */
 body {
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: 'Playfair Display SC', serif;
   color: var(--color-black);
   background-color: var(--color-white);
   margin: 0;
@@ -29,7 +29,7 @@ body {
 }
 
 /* Use Playfair Display SC for titles */
-h1, h2, h3, h4, button {
+h1, h2, h3, h4, button, span {
   font-family: 'Playfair Display SC', serif;
 }
 

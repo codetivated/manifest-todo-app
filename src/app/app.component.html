@@ -15,7 +15,8 @@
   @for (category of categories; track category.id) {
     <app-categories
     [category]="category"
-    (select)="onCategorySelected($event)">
+    (select)="onCategorySelected($event)"
+    [isSelected]="selectedCategory?.id === category.id">
   </app-categories>
   }
 </ul>

@@ -14,6 +14,8 @@ import { Category } from './category.model';
 export class CategoriesComponent {
 @Input({required: true}) category!: Category;
 @Output() select = new EventEmitter<string>();
+@Input({ required: true }) isSelected?: boolean;
+
 
 
   get imagePath(): string {

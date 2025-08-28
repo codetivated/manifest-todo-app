@@ -1,5 +1,5 @@
 <div>
-  <button (click)="onSelectCategory()">
+  <button [class.active]="isSelected" (click)="onSelectCategory()">
     <img [src]="imagePath" [alt]="category.category" >
     <span>{{ category.category }}</span>
   </button>
