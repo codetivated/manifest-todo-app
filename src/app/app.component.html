@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>header</title>
-</head>
-<body>
 <header>
   <app-nav-header></app-nav-header>
 </header>
-<app-hero></app-hero>
 <main>
   <ul id="categories">
   @for (category of categories; track category.id) {
@@ -28,8 +19,6 @@
   } @else {
   <p id="fallback">Please select an intention to manifest</p>
   }
-
 </main>
-</body>
-</html>
+
 

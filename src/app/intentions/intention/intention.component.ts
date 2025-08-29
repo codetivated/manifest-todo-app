@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Intention } from './intention.model';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Intention } from '../../models/intention.model';
 
 @Component({
   selector: 'app-intention',
@@ -10,5 +10,9 @@ import { Intention } from './intention.model';
 })
 export class IntentionComponent {
   @Input({required: true}) intention!: Intention;
+  @Output() completeIntention = new EventEmitter<string>();
 
+  handleOnComplete() {
+  this.completeIntention.emit(this.intention.id);
+  }
 }

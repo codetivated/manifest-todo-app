@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroComponent } from './hero.component';
+import { CreateIntentionComponent } from './create-intention.component';
 
-describe('HeroComponent', () => {
-  let component: HeroComponent;
-  let fixture: ComponentFixture<HeroComponent>;
+describe('CreateIntentionComponent', () => {
+  let component: CreateIntentionComponent;
+  let fixture: ComponentFixture<CreateIntentionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroComponent]
+      imports: [CreateIntentionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeroComponent);
+    fixture = TestBed.createComponent(CreateIntentionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

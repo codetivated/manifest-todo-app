@@ -1,15 +1,26 @@
+@if (isAddingIntention) {
+  <app-create-intention
+  [intentionId]="id"
+  (cancel)="onCancel($event)"
+  (create)="onCreateIntention($event)"
+  ></app-create-intention>
+}
+
 <section id="intentions">
 <header>
   <h2>{{ category }} Intentions</h2>
   <menu>
-    <button>Add Intention</button>
+    <button (click)="onAddIntention()">Add Intention</button>
   </menu>
 </header>
 
 <ul>
     @for (intention of filteredIntentions; track intention.id) {
     <li>
-      <app-intention [intention]="intention"></app-intention>
+      <app-intention
+      [intention]="intention"
+      (completeIntention)="onIntentionComplete($event)"
+      ></app-intention>
     </li>
     }
   </ul>

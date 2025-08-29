@@ -3,6 +3,6 @@
   <time>{{ intention.dueDate }}</time>
   <p>{{ intention.summary }}</p>
   <p class="actions">
-    <button>Complete</button>
+    <button (click)="handleOnComplete()">Complete</button>
   </p>
 </article>
