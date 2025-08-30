@@ -2,31 +2,31 @@ export const CATEGORIES = [
   {
     id: 'mind_intention',
     category: 'Mind',
-    icon: 'mind-intention-icon.png'
+    icon: 'psychology'
   },
   {
     id: 'body_intention',
     category: 'Body',
-    icon: 'body-intention-icon.png'
+    icon: 'fitness_center'
   },
   {
     id: 'soul_intention',
     category: 'Soul',
-    icon: 'soul-intention-icon.png'
+    icon: 'self_improvement'
   },
-    {
+  {
     id: 'goal_intention',
     category: 'Goal',
-    icon: 'goal-intention-icon.png'
+    icon: 'track_changes'
   },
-    {
+  {
     id: 'money_intention',
     category: 'Money',
-    icon: 'money-intention-icon.png'
+    icon: 'savings'
   },
-    {
+  {
     id: 'love_intention',
     category: 'Love',
-    icon: 'love-intention-icon.png'
-  },
+    icon: 'favorite'
+  }
 ];

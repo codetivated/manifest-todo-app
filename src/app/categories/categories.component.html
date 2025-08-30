@@ -1,7 +1,7 @@
 <div>
   <button [class.active]="isSelected" (click)="onSelectCategory()">
-    <img [src]="imagePath" [alt]="category.category" >
-    <span>{{ category.category }}</span>
+  <span id="img" class="material-icons">{{ category.icon }}</span>
+  <span>{{ category.category }}</span>
   </button>
 </div>
 
