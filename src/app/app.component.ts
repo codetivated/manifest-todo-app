@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavHeaderComponent } from '../app/nav-header/nav-header.component'
 import { CategoriesComponent } from './categories/categories.component';
 import {CATEGORIES} from './data/categories';
 import { IntentionsComponent } from "./intentions/intentions.component";
@@ -8,7 +7,7 @@ import { IntentionsComponent } from "./intentions/intentions.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavHeaderComponent, CategoriesComponent, IntentionsComponent],
+  imports: [CategoriesComponent, IntentionsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
