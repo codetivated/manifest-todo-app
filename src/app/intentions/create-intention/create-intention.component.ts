@@ -12,7 +12,7 @@ import { Intention } from '../../models/intention.model';
 })
 export class CreateIntentionComponent {
     @Input({ required: true }) intentionId!: string;
-    @Output() cancel = new EventEmitter<string>();
+    @Output() cancel = new EventEmitter<void>();
     @Output() create = new EventEmitter<Intention>();
     isCanceling: boolean = false;
 
@@ -26,7 +26,7 @@ export class CreateIntentionComponent {
 
   onCancel() {
     this.isCanceling = true;
-    this.cancel.emit('cancel');
+    this.cancel.emit();
   }
 
   handleSubmitIntention(form: NgForm) {
