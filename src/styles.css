@@ -5,6 +5,7 @@
   --color-grape: #6A4C93;
   --color-lilac-gray: #C4B5FD;
   --color-butter-yellow: #FEE440;
+  --color-orange: #fe9240;
   --color-mint-green: #00BB94;
   --color-ivory-white: #FDFDFD;
   --color-deep-black: #333;
@@ -51,6 +52,7 @@ p {
     var(--color-lilac-gray),
     var(--color-white),
     var(--color-butter-yellow),
+    var(--color-orange),
     var(--color-mint-green)
   );
   background-size: 400% 400%;

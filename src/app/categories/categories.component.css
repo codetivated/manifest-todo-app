@@ -27,6 +27,7 @@ button:active,
     var(--color-lilac-gray),
     var(--color-white),
     var(--color-butter-yellow),
+    var(--color-orange),
     var(--color-mint-green)
   );
   background-size: 400% 400%;

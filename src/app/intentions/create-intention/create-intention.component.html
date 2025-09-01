@@ -1,5 +1,5 @@
-<div class="backdrop"></div>
-<dialog open (click)="$event.stopPropagation()">
+<div class="backdrop" (click)="onCancel()"></div>
+<dialog open>
   <h2>Add Intention</h2>
   <form #intentionForm="ngForm" (ngSubmit)="handleSubmitIntention(intentionForm)">
     <p>
