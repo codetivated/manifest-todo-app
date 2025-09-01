@@ -27,8 +27,8 @@ onAddIntention() {
   this.isAddingIntention = true;
 }
 
-onCancel(event: string) {
-  console.log('Cancel event received:', event);
+onCancel() {
+  console.log('Cancel event received');
   this.isAddingIntention = false;
 }
 
