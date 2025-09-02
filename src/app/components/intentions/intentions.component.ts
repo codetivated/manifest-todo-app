@@ -19,7 +19,7 @@ export class IntentionsComponent {
   constructor(private intentionsService: IntentionsService) {}
 
 get intentionsList() {
-  return this.intentionsService.getIntentions(this.id);
+  return this.intentionsService.getIntentionById(this.id);
 }
 
 onAddIntention() {
