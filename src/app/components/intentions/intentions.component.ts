@@ -27,11 +27,6 @@ onAddIntention() {
   this.isAddingIntention = true;
 }
 
-onCreateIntention(newIntention: NewIntention) {
-  this.intentionsService.addIntention(newIntention, this.id)
-  this.isAddingIntention = false;
-}
-
 onIntentionComplete(intentionId: string) {
   this.intentionsService.deleteIntention(intentionId);
 }
