@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CategoriesComponent } from '../components/categories/categories.component';
-import {CATEGORIES} from '../data/categories';
-import { IntentionsComponent } from "../components/intentions/intentions.component";
+import { CategoriesComponent } from './components/categories/categories.component';
+import {CATEGORIES} from './data/categories';
+import { IntentionsComponent } from "./components/intentions/intentions.component";
 
 
 @Component({
