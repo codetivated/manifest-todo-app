@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Intention } from '../../models/intention.model';
+import { Intention } from '../../../models/intention.model';
 
 @Component({
   selector: 'app-create-intention',

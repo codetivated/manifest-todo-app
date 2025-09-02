@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { INTENTIONS } from '../data/intentions';
+import { INTENTIONS } from '../../data/intentions';
 import { IntentionComponent } from "./intention/intention.component";
 import { CreateIntentionComponent } from './create-intention/create-intention.component';
-import { Intention } from '../models/intention.model';
+import { Intention } from '../../models/intention.model';
 
 @Component({
   selector: 'app-intentions',

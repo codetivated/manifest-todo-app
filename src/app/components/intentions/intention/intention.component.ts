@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Intention } from '../../models/intention.model';
+import { Intention } from '../../../models/intention.model';
 
 @Component({
   selector: 'app-intention',
