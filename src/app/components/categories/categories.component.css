@@ -19,7 +19,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-mint-green);
+  background-color: var(--color-orange);
 }
 
 button:active,
