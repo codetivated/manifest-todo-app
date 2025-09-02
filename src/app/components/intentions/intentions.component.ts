@@ -27,9 +27,7 @@ onAddIntention() {
   this.isAddingIntention = true;
 }
 
-onIntentionComplete(intentionId: string) {
-  this.intentionsService.deleteIntention(intentionId);
-}
+
 
 onCancel() {
   console.log('Cancel event received');

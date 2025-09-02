@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Intention } from '../../../models/intention.model';
 import { DatePipe } from '@angular/common';
+import {IntentionsService} from '../../../services/intentions.service';
 
 @Component({
   selector: 'app-intention',
@@ -11,9 +12,10 @@ import { DatePipe } from '@angular/common';
 })
 export class IntentionComponent {
   @Input({required: true}) intention!: Intention;
-  @Output() completeIntention = new EventEmitter<string>();
+  private intentionsService = inject(IntentionsService);
 
-  handleOnComplete() {
-  this.completeIntention.emit(this.intention.id);
-  }
+
+  onCompleteIntention() {
+  this.intentionsService.deleteIntention(this.intention.id);
+}
 }
