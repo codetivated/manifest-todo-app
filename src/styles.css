@@ -20,18 +20,12 @@ html {
   height: 100%;
 }
 
-/* Apply Cabin Condensed to the whole site */
 body {
-  font-family: 'Playfair Display SC', serif;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-black);
   background-color: var(--color-white);
   margin: 0;
   padding: 0;
-}
-
-/* Use Playfair Display SC for titles */
-h1, h2, h3, h4, button, span {
-  font-family: 'Playfair Display SC', serif;
 }
 
 p {
@@ -40,7 +34,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
 
 .iridescent-bg {
   border-radius: 200px;

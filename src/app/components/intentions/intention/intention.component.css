@@ -5,19 +5,14 @@ article {
   background-color: var(--color-ivory-white);
 }
 
-h2 {
-  margin: 0;
-}
-
 time {
   color: var(--color-black);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
   font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .actions {
   text-align: right;
