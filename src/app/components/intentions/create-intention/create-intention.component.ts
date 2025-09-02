@@ -1,7 +1,8 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { type NewIntention } from '../../../models/intention.model';
+import {IntentionsService} from '../../../services/intentions.service';
 
 @Component({
   selector: 'app-create-intention',
@@ -11,9 +12,11 @@ import { type NewIntention } from '../../../models/intention.model';
   styleUrl: './create-intention.component.css'
 })
 export class CreateIntentionComponent {
-    @Output() cancel = new EventEmitter<void>();
+    @Output() close = new EventEmitter<void>();
     @Output() create = new EventEmitter<NewIntention>();
+    @Input({required: true}) id!: string;
 
+    private intentionsService = inject(IntentionsService);
 
   intentionData = {
     title: '',
@@ -23,17 +26,17 @@ export class CreateIntentionComponent {
 
 
   onCancel() {
-    this.cancel.emit();
+    this.close.emit();
   }
 
   handleSubmitIntention(form: NgForm) {
-    console.log('New intention submitted');
       const newIntention: NewIntention = {
       title: this.intentionData.title,
       summary: this.intentionData.summary,
       dueDate: this.intentionData.dueDate,
     };
-    this.create.emit(newIntention);
+    this.intentionsService.addIntention(newIntention, this.id);
+    this.close.emit();
     form.resetForm();
   }
 

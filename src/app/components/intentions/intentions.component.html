@@ -1,7 +1,7 @@
 @if (isAddingIntention) {
   <app-create-intention
-  (cancel)="onCancel()"
-  (create)="onCreateIntention($event)"
+  (close)="onCancel()"
+  [id]="id"
   ></app-create-intention>
 }
 
