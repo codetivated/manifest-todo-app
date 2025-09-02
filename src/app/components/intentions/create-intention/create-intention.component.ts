@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Intention } from '../../../models/intention.model';
+import { type NewIntention } from '../../../models/intention.model';
 
 @Component({
   selector: 'app-create-intention',
@@ -11,9 +11,8 @@ import { Intention } from '../../../models/intention.model';
   styleUrl: './create-intention.component.css'
 })
 export class CreateIntentionComponent {
-    @Input({ required: true }) intentionId!: string;
     @Output() cancel = new EventEmitter<void>();
-    @Output() create = new EventEmitter<Intention>();
+    @Output() create = new EventEmitter<NewIntention>();
 
 
   intentionData = {
@@ -29,9 +28,7 @@ export class CreateIntentionComponent {
 
   handleSubmitIntention(form: NgForm) {
     console.log('New intention submitted');
-      const newIntention: Intention = {
-      id: crypto.randomUUID(),
-      intentionId: this.intentionId,
+      const newIntention: NewIntention = {
       title: this.intentionData.title,
       summary: this.intentionData.summary,
       dueDate: this.intentionData.dueDate,

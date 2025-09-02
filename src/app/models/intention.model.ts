@@ -5,3 +5,9 @@ export interface Intention {
   summary: string;
   dueDate: string;
 }
+
+export interface NewIntention {
+  title: string;
+  summary: string;
+  dueDate: string;
+}

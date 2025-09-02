@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { INTENTIONS } from '../../data/intentions';
 import { IntentionComponent } from "./intention/intention.component";
 import { CreateIntentionComponent } from './create-intention/create-intention.component';
-import { Intention } from '../../models/intention.model';
+import { type NewIntention } from '../../models/intention.model';
 
 @Component({
   selector: 'app-intentions',
@@ -32,9 +32,16 @@ onCancel() {
   this.isAddingIntention = false;
 }
 
-onCreateIntention(newIntention: Intention) {
+onCreateIntention(newIntention: NewIntention) {
   console.log('New intention created:', newIntention);
-  this.intentions.push(newIntention);
+
+  this.intentions.unshift({
+      id: crypto.randomUUID(),
+      intentionId: this.id,
+      title: newIntention.title,
+      summary: newIntention.summary,
+      dueDate: newIntention.dueDate
+  });
   this.isAddingIntention = false;
 }
 
