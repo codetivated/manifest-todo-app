@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Intention } from '../../../models/intention.model';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-intention',
   standalone: true,
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './intention.component.html',
   styleUrl: './intention.component.css'
 })

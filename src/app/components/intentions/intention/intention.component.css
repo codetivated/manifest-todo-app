@@ -11,10 +11,12 @@ h2 {
 
 time {
   color: var(--color-black);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
-  font-size: 1rem;;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .actions {
