@@ -18,17 +18,20 @@ button {
   text-align: left;
 }
 
-button:hover,
+button:hover {
+  background-color: var(--color-mint-green);
+}
+
 button:active,
 .active { background: linear-gradient(
     135deg,
     var(--color-orchid),
+    var(--color-mint-green),
     var(--color-lavender-pink),
     var(--color-lilac-gray),
     var(--color-white),
     var(--color-butter-yellow),
-    var(--color-orange),
-    var(--color-mint-green)
+    var(--color-orange)
   );
   background-size: 400% 400%;
   animation: shimmer 10s ease infinite;
