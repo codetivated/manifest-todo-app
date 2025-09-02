@@ -4,12 +4,13 @@
   --color-lavender-pink: #F15BB5;
   --color-grape: #6A4C93;
   --color-lilac-gray: #C4B5FD;
-  --color-butter-yellow: #FEE440;
+  --color-butter-yellow: #f2e48c;
   --color-orange: #fe9240;
   --color-mint-green: #00BB94;
   --color-ivory-white: #FDFDFD;
-  --color-deep-black: #333;
+  --color-deep-black: #090000;
   --color-white: #fff;
+  --color-baby-pink: pink;
 }
 
 * {
@@ -23,7 +24,7 @@ html {
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-black);
-  background-color: var(--color-white);
+  background-color: var(--color-baby-pink);
   margin: 0;
   padding: 0;
 }

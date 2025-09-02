@@ -1,6 +1,6 @@
 <article>
   <h2>{{ intention.title }}</h2>
-  <time>{{ intention.dueDate | date }}</time>
+  <time>{{ intention.dueDate | date : 'fullDate' }}</time>
   <p>{{ intention.summary }}</p>
   <p class="actions">
     <button (click)="handleOnComplete()">Complete</button>
