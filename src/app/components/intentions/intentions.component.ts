@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { INTENTIONS } from '../../data/intentions';
 import { IntentionComponent } from "./intention/intention.component";
 import { CreateIntentionComponent } from './create-intention/create-intention.component';
 import { type NewIntention } from '../../models/intention.model';
+import { IntentionsService } from '../../services/intentions.service';
 
 @Component({
   selector: 'app-intentions',
@@ -16,10 +16,10 @@ export class IntentionsComponent {
   @Input({required: true}) id!: string;
   isAddingIntention: boolean = false;
 
-intentions = INTENTIONS;
+  constructor(private intentionsService: IntentionsService) {}
 
-get filteredIntentions() {
-  return this.intentions.filter(intention => intention.intentionId === this.id);
+get intentionsList() {
+  return this.intentionsService.getIntentions(this.id);
 }
 
 onAddIntention() {
@@ -27,27 +27,18 @@ onAddIntention() {
   this.isAddingIntention = true;
 }
 
-onCancel() {
-  console.log('Cancel event received');
-  this.isAddingIntention = false;
-}
-
 onCreateIntention(newIntention: NewIntention) {
-  console.log('New intention created:', newIntention);
-
-  this.intentions.unshift({
-      id: crypto.randomUUID(),
-      intentionId: this.id,
-      title: newIntention.title,
-      summary: newIntention.summary,
-      dueDate: newIntention.dueDate
-  });
+  this.intentionsService.addIntention(newIntention, this.id)
   this.isAddingIntention = false;
 }
 
 onIntentionComplete(intentionId: string) {
-  console.log('Complete task event received ');
-  this.intentions = this.intentions.filter(intention => intention.id !== intentionId);
+  this.intentionsService.deleteIntention(intentionId);
+}
+
+onCancel() {
+  console.log('Cancel event received');
+  this.isAddingIntention = false;
 }
 
 }
